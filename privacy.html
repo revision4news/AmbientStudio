@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Ambient Studio</title>
+  <meta name="description" content="What Ambient Studio reads from YouTube, TikTok, Instagram, X, Twitch and Kick, where it is kept, and how to remove it.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="./"><span class="dot"></span> Ambient Studio</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="data-deletion.html">Data deletion</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective November 24, 2026</p>
+
+    <p class="lead">Ambient Studio ("Ambient Studio", "we", "us") is the video production and publishing tool behind Revision 4 News and Ambiance Escapism. This policy explains what information Ambient Studio gets from the platforms it connects to, what it does with that information, where it is kept, and how to remove it.</p>
+
+    <div class="card">
+      <p><strong>In short:</strong> Ambient Studio runs on its operator's own computer and only connects to accounts the operator owns or manages. It reads those accounts' profile details and statistics, and posts videos the operator made to them. Everything it stores stays on that computer. We don't sell or rent any information, we don't show ads, and we don't track anyone.</p>
+    </div>
+
+    <h2>1. Who this covers</h2>
+    <p>Ambient Studio is not a public service and nobody can sign up for it. The only people whose accounts are connected to it are its operator and anyone the operator manages channels with. Those people choose to connect their accounts, and they can disconnect them at any time (see <a href="#deletion">section 8</a>).</p>
+    <p>Ambient Studio doesn't collect information about the people who watch, follow or comment on our videos. It only reads totals, such as view and follower counts.</p>
+
+    <h2>2. What we get from each platform</h2>
+    <p>Accounts are connected with each platform's own sign-in (OAuth), so Ambient Studio never sees a password. It asks only for the permissions listed here.</p>
+    <table>
+      <thead><tr><th>Platform</th><th>What Ambient Studio reads or does</th><th>Permissions</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>YouTube (Google)</td>
+          <td>The Google account's email address (to group channels by account); the channel's name, picture and statistics; its videos and their views, watch time and, for monetized channels, revenue. Uploads and edits the videos the operator made.</td>
+          <td><code>openid</code>, <code>userinfo.email</code>, <code>youtube</code>, <code>yt-analytics.readonly</code>, <code>yt-analytics-monetary.readonly</code></td>
+        </tr>
+        <tr>
+          <td>TikTok</td>
+          <td>The account's open ID, display name, username, avatar, bio, profile link, verification status, follower/following/like/video counts and its public videos' statistics. Sends the operator's videos to the account, as a draft in the TikTok inbox or as a post. Before posting it reads the account's posting options (such as who can watch and the longest video allowed).</td>
+          <td><code>user.info.basic</code>, <code>user.info.profile</code>, <code>user.info.stats</code>, <code>video.list</code>, <code>video.upload</code>, <code>video.publish</code></td>
+        </tr>
+        <tr>
+          <td>Instagram (Meta)</td>
+          <td>The Instagram professional account's ID, username, name and profile picture; the Facebook Page it's linked to; the account's and its Reels' insights (views, likes, reach and similar); and its daily publishing quota. Publishes the operator's videos as Reels.</td>
+          <td><code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>instagram_manage_insights</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code>, <code>business_management</code></td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>The account's name, username, picture, follower count and post count, and its recent posts' view, like, reply and repost counts. Ambient Studio does not post to X.</td>
+          <td><code>users.read</code>, <code>tweet.read</code>, <code>offline.access</code></td>
+        </tr>
+        <tr>
+          <td>Twitch</td>
+          <td>The channel's name, picture, follower count and live status, and its stream key, which is used to send the Revision 4 News live stream to it.</td>
+          <td><code>moderator:read:followers</code>, <code>channel:read:stream_key</code></td>
+        </tr>
+        <tr>
+          <td>Kick</td>
+          <td>The account's name and picture; the channel's title, category, subscriber count and live status; and its stream key, which is used to send the live stream to it.</td>
+          <td><code>user:read</code>, <code>channel:read</code>, <code>streamkey:read</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Each platform also gives Ambient Studio access and refresh tokens so it can act for the account without asking the operator to sign in every time.</p>
+
+    <h2>3. How we use it</h2>
+    <ul>
+      <li>To publish the videos the operator made to the accounts the operator chose, with the title, description, caption and visibility the operator set.</li>
+      <li>To show the operator how their channels and videos are doing, in Ambient Studio's own dashboards.</li>
+      <li>To send the Revision 4 News live stream to the operator's own Twitch and Kick channels.</li>
+      <li>To show which account is connected (its name and picture) and whether its sign-in still works.</li>
+    </ul>
+    <p>We don't use this information for advertising, profiling or anything other than the uses above. We don't use information from YouTube, TikTok or Instagram to train AI models.</p>
+
+    <h2>4. Where it's kept, and for how long</h2>
+    <p>Ambient Studio stores everything on its operator's own computer: account details and statistics in a local database, and sign-in tokens in files that only the operator's user account can read. We don't run a server that receives this information, and nothing is uploaded anywhere except to the platform it belongs to.</p>
+    <ul>
+      <li><strong>Sign-in tokens</strong> are kept until the account is disconnected (or the platform revokes them), and are then deleted.</li>
+      <li><strong>Account details and statistics</strong> are kept so the dashboards can show changes over time, until the account is disconnected or the operator deletes them.</li>
+      <li><strong>Videos and their files</strong> are the operator's own work and stay on the operator's computer until the operator deletes them.</li>
+    </ul>
+    <p>The operator's browser also keeps a few display preferences (such as which tab was open last) in its local storage. They contain no account information.</p>
+
+    <h2>5. Sharing</h2>
+    <p>We don't sell, rent or trade any information. Information from a platform is only ever sent back to that same platform, to publish a video or read statistics.</p>
+    <p>To make videos, Ambient Studio sends some content to AI services: for example the text of a news article and the script written from it, to write and fact-check the script and the video's title and description; and the script, to turn it into a voice-over. That content is the operator's own material and public news. No account information, tokens or statistics from the platforms above are sent to these services.</p>
+    <p>We would only disclose information if the law required it.</p>
+
+    <h2>6. YouTube API Services</h2>
+    <p>Ambient Studio uses YouTube API Services. By connecting a YouTube channel to Ambient Studio, you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google's handling of your information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. You can remove Ambient Studio's access to your Google account at any time from <a href="https://myaccount.google.com/connections">your Google account's third-party connections page</a> (also reachable at <a href="https://security.google.com/settings/security/permissions">security.google.com/settings/security/permissions</a>).</p>
+
+    <h2>7. Other platforms' policies</h2>
+    <p>Each platform's own policy covers what it does with your information: <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok Privacy Policy</a>, <a href="https://privacycenter.instagram.com/policy">Instagram Privacy Policy</a>, <a href="https://x.com/en/privacy">X Privacy Policy</a>, <a href="https://www.twitch.tv/p/legal/privacy-notice/">Twitch Privacy Notice</a> and <a href="https://kick.com/privacy-policy">Kick Privacy Policy</a>.</p>
+
+    <h2 id="deletion">8. Disconnecting an account and deleting its data</h2>
+    <p>Any connected account can be disconnected at any time, which deletes its tokens, details and statistics from Ambient Studio. You can also remove Ambient Studio's access on the platform itself, or email us to have everything deleted. The <a href="data-deletion.html">data deletion page</a> has step-by-step instructions for each platform. We act on deletion requests within 30 days and confirm by email.</p>
+
+    <h2>9. Security</h2>
+    <p>Ambient Studio talks to each platform over encrypted connections (HTTPS). It runs on its operator's computer, and the files holding sign-in tokens can only be read by the operator's user account. No system is perfectly secure, but we only keep what Ambient Studio needs, and only on that one computer.</p>
+
+    <h2>10. Children</h2>
+    <p>Ambient Studio is not meant for, and is not used by, anyone under 13 (or the minimum age for using the connected platforms where they live). We don't knowingly hold information about children.</p>
+
+    <h2>11. Your choices and rights</h2>
+    <p>If your account is connected to Ambient Studio, you can ask us what we hold about it, to correct it, or to delete it, by emailing us. Depending on where you live, you may have further rights under laws such as the GDPR or CCPA; we will honor them.</p>
+
+    <h2>12. Changes</h2>
+    <p>If this policy changes, we'll update the date at the top of this page. If a change affects how we use information from a connected account, we'll tell the people whose accounts are connected before it applies.</p>
+
+    <h2>13. Contact</h2>
+    <p>Questions or requests: <a href="mailto:ambient.studio.contact@gmail.com">ambient.studio.contact@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    <p>Ambient Studio · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="data-deletion.html">Data deletion</a></p>
+  </footer>
+</body>
+</html>
